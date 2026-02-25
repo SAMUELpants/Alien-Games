@@ -148,9 +148,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
+window.auth = getAuth(app);
+window.db = getFirestore(app);
 /* SAVE FUNCTION */
 window.saveBalatroProgress = async function(progressData) {
   const user = auth.currentUser;
