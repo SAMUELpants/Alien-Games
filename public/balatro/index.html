@@ -126,6 +126,61 @@
       Love(Module);
     }
   </script>
+  </script>
+
+<!-- 🔥 FIREBASE CLOUD SAVE -->
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc }
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+/* 🔥 REPLACE THIS WITH YOUR REAL CONFIG */
+const firebaseConfig = {
+   apiKey: "AIzaSyAv9stc2v_g2VufOHUSlIAFehl2Gx4UE1E",
+  authDomain: "alien-games-2969a.firebaseapp.com",
+  projectId: "alien-games-2969a",
+  storageBucket: "alien-games-2969a.firebasestorage.app",
+  messagingSenderId: "252082915218",
+  appId: "1:252082915218:web:f51254830d4063237c634b",
+  measurementId: "G-TGYSMRVJRN"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+/* SAVE FUNCTION */
+window.saveBalatroProgress = async function(progressData) {
+  const user = auth.currentUser;
+  if (!user) return;
+
+  await setDoc(doc(db, "users", user.uid), {
+    balatro: progressData
+  });
+};
+
+/* LOAD FUNCTION */
+window.loadBalatroProgress = async function() {
+  const user = auth.currentUser;
+  if (!user) return null;
+
+  const docSnap = await getDoc(doc(db, "users", user.uid));
+
+  if (docSnap.exists()) {
+    return docSnap.data().balatro;
+  }
+  return null;
+};
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("Logged in as:", user.uid);
+  }
+});
+
+</script>
   <script type="text/javascript" src="game.js?v=d7e34743-2fea-4de6-8a0e-1103b5fcf07f"></script>
   <script async type="text/javascript" src="love.js" onload="applicationLoad(this)"></script>
   <!-- <footer>
