@@ -181,6 +181,66 @@ onAuthStateChanged(auth, (user) => {
 });
 
 </script>
+  <div style="position:fixed;top:10px;right:10px;z-index:9999;">
+  <button id="saveCloud">Save to Cloud</button>
+  <button id="loadCloud">Load from Cloud</button>
+</div>
+
+<script>
+async function waitForLove() {
+  return new Promise(resolve => {
+    const check = () => {
+      if (typeof Module !== "undefined" && Module.FS) {
+        resolve();
+      } else {
+        setTimeout(check, 200);
+      }
+    };
+    check();
+  });
+}
+
+document.getElementById("saveCloud").onclick = async () => {
+  const user = auth.currentUser;
+  if (!user) {
+    alert("Not logged in");
+    return;
+  }
+
+  await waitForLove();
+
+  const data = Module.FS.readFile("/home/web_user/love/game/1/save.jkr");
+
+  await setDoc(doc(db, "saves", user.uid), {
+    save: Array.from(data)
+  });
+
+  alert("Saved to cloud!");
+};
+
+document.getElementById("loadCloud").onclick = async () => {
+  const user = auth.currentUser;
+  if (!user) {
+    alert("Not logged in");
+    return;
+  }
+
+  await waitForLove();
+
+  const snap = await getDoc(doc(db, "saves", user.uid));
+  if (!snap.exists()) {
+    alert("No cloud save found");
+    return;
+  }
+
+  const data = new Uint8Array(snap.data().save);
+
+  Module.FS.writeFile("/home/web_user/love/game/1/save.jkr", data);
+
+  alert("Loaded! Reloading...");
+  location.reload();
+};
+</script>
   <script type="text/javascript" src="game.js?v=d7e34743-2fea-4de6-8a0e-1103b5fcf07f"></script>
   <script async type="text/javascript" src="love.js" onload="applicationLoad(this)"></script>
   <!-- <footer>
