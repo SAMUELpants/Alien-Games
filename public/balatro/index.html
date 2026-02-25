@@ -204,6 +204,18 @@ onAuthStateChanged(auth, (user) => {
 
   const auth = firebase.auth();
   const db = firebase.firestore();
+  <script>
+function saveToCloud() {
+  const user = auth.currentUser;
+
+  if (!user) {
+    alert("Not logged in");
+    return;
+  }
+
+  alert("Your UID is: " + user.uid);
+}
+</script>
 </script>
 
 <script src="love.js"></script>
