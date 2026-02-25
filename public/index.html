@@ -299,18 +299,46 @@
 </a>
 
 
+<button id="loginBtn">Sign in with Google</button>
+<button id="logoutBtn" style="display:none;">Logout</button>
 
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged }
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyAv9stc2v_g2VufOHUSlIAFehl2Gx4UE1E",
+  authDomain: "alien-games-2969a.firebaseapp.com",
+  projectId: "alien-games-2969a",
+  storageBucket: "alien-games-2969a.firebasestorage.app",
+  messagingSenderId: "252082915218",
+  appId: "1:252082915218:web:f51254830d4063237c634b",
+  measurementId: "G-TGYSMRVJRN"
+};
 
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
 
+loginBtn.onclick = () => {
+  signInWithPopup(auth, provider);
+};
 
+logoutBtn.onclick = () => {
+  signOut(auth);
+};
 
-
-
-
-
-
-
-
-
+onAuthStateChanged(auth, user => {
+  if (user) {
+    loginBtn.style.display = "none";
+    logoutBtn.style.display = "block";
+  } else {
+    loginBtn.style.display = "block";
+    logoutBtn.style.display = "none";
+  }
+});
+</script>
