@@ -186,8 +186,13 @@ onAuthStateChanged(auth, (user) => {
   <!-- <footer>
       <p>Built with <a href="https://github.com/Davidobot/love.js">love.js</a> <button onclick="goFullScreen();">Go Fullscreen</button><br>Hint: Reload the page if screen is blank</p>
     </footer> -->
-<button id="saveCloud">Save to Cloud</button>
-<button id="loadCloud">Load from Cloud</button>
+<button id="saveCloud" style="position:fixed; top:10px; right:10px; z-index:9999;">
+  Save to Cloud
+</button>
+
+<button id="loadCloud" style="position:fixed; top:50px; right:10px; z-index:9999;">
+  Load from Cloud
+</button>
   
 </body>
 
