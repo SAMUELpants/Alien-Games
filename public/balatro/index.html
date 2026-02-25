@@ -248,52 +248,6 @@ document.getElementById("saveCloud").onclick = async () => {
     return;
   }
 
-  await waitForLove();
-
-  try {
-    const data = Module.FS.readFile("/home/web_user/love/game/1/save.jkr");
-
-    await setDoc(doc(db, "saves", user.uid), {
-      save: Array.from(data)
-    });
-
-    alert("Saved to cloud!");
-  } catch (err) {
-    console.error(err);
-    alert("Save failed");
-  }
-};
-
-document.getElementById("loadCloud").onclick = async () => {
-  const user = auth.currentUser;
-  if (!user) {
-    alert("Not logged in");
-    return;
-  }
-
-  await waitForLove();
-
-  try {
-    const snap = await getDoc(doc(db, "saves", user.uid));
-    if (!snap.exists()) {
-      alert("No cloud save found");
-      return;
-    }
-
-    const data = new Uint8Array(snap.data().save);
-
-    Module.FS.writeFile("/home/web_user/love/game/1/save.jkr", data);
-
-    alert("Loaded from cloud! Reloading...");
-    location.reload();
-
-  } catch (err) {
-    console.error(err);
-    alert("Load failed");
-  }
-};
-
 </script>
 </body>
-
 </html>
