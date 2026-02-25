@@ -181,65 +181,11 @@ onAuthStateChanged(auth, (user) => {
 });
 
 </script>
-
   <script type="text/javascript" src="game.js?v=d7e34743-2fea-4de6-8a0e-1103b5fcf07f"></script>
-
-<!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
-
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyAv9stc2v_g2VufOHUSlIAFehl2Gx4UE1E",
-  authDomain: "alien-games-2969a.firebaseapp.com",
-  projectId: "alien-games-2969a",
-  storageBucket: "alien-games-2969a.firebasestorage.app",
-  messagingSenderId: "252082915218",
-  appId: "1:252082915218:web:f51254830d4063237c634b",
-  measurementId: "G-TGYSMRVJRN"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-
-  const auth = firebase.auth();
-  const db = firebase.firestore();
- 
-
-  alert("Your UID is: " + user.uid);
-}
-</script>
-</script>
-
-<script src="love.js"></script>
-  
   <script async type="text/javascript" src="love.js" onload="applicationLoad(this)"></script>
   <!-- <footer>
       <p>Built with <a href="https://github.com/Davidobot/love.js">love.js</a> <button onclick="goFullScreen();">Go Fullscreen</button><br>Hint: Reload the page if screen is blank</p>
     </footer> -->
-<button id="saveCloud" style="position:fixed; top:10px; right:10px; z-index:9999;">
-  Save to Cloud
-</button>
-
-<button id="loadCloud" style="position:fixed; top:50px; right:10px; z-index:9999;">
-  Load from Cloud
-</button>
-  <script type="module">
-
-
-
-function waitForLove() {
-  return new Promise(resolve => {
-    const check = () => {
-      if (typeof Module !== "undefined" && Module.FS) {
-        resolve();
-      } else {
-        setTimeout(check, 200);
-      }
-    };
-    check();
-  });
-}
-</script>
 </body>
+
 </html>
