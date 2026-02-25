@@ -1,0 +1,22 @@
+<div align="center">
+  <h1>Alien Games</h1>
+</div>
+Unblocked tester for VAHS specific for Drew and Sam you are Alien overlords and supreme leaders 👽!
+Try balf-games.vercel.app!
+
+## Deploy to a cloud service
+Currently i've only tested this on vercel and it works fine.
+[![Deploy to Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repository-url=https://github.com/mynamescrax/balf-games)
+
+## Run locally
+
+You need [NodeJS](https://nodejs.org) and [Git](https://git-scm.com/download) installed on your system.
+
+````bash
+git clone https://github.com/mynamescrax/balf-games # Clone the repo
+npm install # Install packages
+npm start # Start the bare server + serve static files
+````
+
+## About us 
+## This project has been forked by Art Class v4 and has been heavily tweaked by chatgpt and skidding. Cr to frogies for the original idea, art class for forking it and being the base of our project and Truffled.lol since our design is inspired from them. Thanks to the ultimate game stash where you can find the link in /assets/games and then any html file!
