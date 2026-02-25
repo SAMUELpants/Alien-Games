@@ -2,7 +2,7 @@
   <h1>Alien Games</h1>
 </div>
 Unblocked tester for VAHS specific for Drew and Sam you are Alien overlords and supreme leaders 👽!
-Try balf-games.vercel.app!
+Try https://laiwyfg.vercel.app/!
 
 ## Deploy to a cloud service
 Currently i've only tested this on vercel and it works fine.
