@@ -55,7 +55,13 @@ var apps = [
       "title": "TikTok",
       "url": "https://tiktok.com",
       'image': 'https://sf-tb-sg.ibytedtos.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png'
-    },
+    },   
+    {
+      "id": "Instagram",
+      "title": "Instagram",
+      "url": "https://www.instagram.com",
+      'image': 'https://commons.wikimedia.org/wiki/File:Instagram_icon.png'
+    },    
     {
       "id": "reddit",
       "title": "Reddit",
@@ -90,5 +96,6 @@ var apps = [
   
   console.log("Loaded " + apps.length + " apps")
   if (customapps) console.log("Loaded " + customapps.length + " custom apps")
+
 
 
