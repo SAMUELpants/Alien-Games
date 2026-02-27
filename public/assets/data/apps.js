@@ -67,7 +67,13 @@ var apps = [
       "title": "snapchat",
       "url": "https://www.snapchat.com",
       'image': 'https://phys.org/news/2018-06-snapchat.html'
-    },    
+    }, 
+    {
+      "id": "Pinterest",
+      "title": "Pinterest",
+      "url": "https://www.pinterest.com/",
+      'image': 'https://phys.org/news/2018-06-snapchat.html'
+    },
     {
       "id": "reddit",
       "title": "Reddit",
@@ -102,6 +108,7 @@ var apps = [
   
   console.log("Loaded " + apps.length + " apps")
   if (customapps) console.log("Loaded " + customapps.length + " custom apps")
+
 
 
 
