@@ -12,6 +12,13 @@ var games = [
     image: 'assets/images/thatsnotmyneighbor.png'
   }, 
   {
+    id: 'Idle Breakout',
+    title: 'Idle Breakout',
+    description: 'Bounce the balls blah blah blah',
+    html: 'https://www.coolmathgames.com/0-idle-breakout',
+    image: ''
+  }, 
+  {
     id: 'Deadshot.io',
     title: 'Deadshot',
     description: 'This one is for Cade Burleson Yw for Deadshot lol',
@@ -21,14 +28,14 @@ var games = [
   {
     id: 'babysniperinvietnam',
     title: 'Baby Sniper In Vietnam',
-    description: 'bru waht is this bruuu.',
+    description: 'Top 3 games ever btw.',
     html: 'assets/games/babysniperinvietnam.html',
     image: 'assets/images/babysniperinvietnam.png'
   },
   {
     id: 'untitledgoosegame',
     title: 'Untitled goose game',
-    description: 'goose',
+    description: 'It is a goose game idk',
     html: 'assets/games/ugg.html',
     image: 'assets/images/ugg.png'
   },
@@ -42,21 +49,21 @@ var games = [
   {
     id: 'blockblast',
     title: 'Block Blast',
-    description: 'Block Blast is a popular, fast-paced, and highly addictive, Tetris-style puzzle game where players drag and drop, colorful, wooden-style, block shapes onto an 8x8 grid to fill rows and columns, clearing them for points.',
+    description: 'We all know what it is.',
     html: 'assets/games/blockblast.html',
     image: 'assets/images/blockblast.png'
   },
   {
     id: 'wbwwb',
     title: 'We Become What We Behold',
-    description: 'We Become What We Behold centers on observation in this casual puzzle game. Capture moments of people with different shapes, fueling reactions.',
+    description: 'This one is for Gabriel D',
     html: 'assets/games/wbwwb.html',
     image: 'assets/images/wbwwb.png'
   },
   {
     id: 'raft',
     title: 'Raft',
-    description: 'Raft™ throws you and your friends into an epic adventure out on the big open sea, with the objective to stay alive, gather resources and build yourself a floating home worthy of survival.',
+    description: 'demo of the steam game',
     html: 'assets/games/raft.html',
     image: 'assets/images/raft.png'
   },
@@ -112,35 +119,35 @@ var games = [
   {
     id: 'fnaf',
     title: "Five Nights At Freddy's",
-    description: 'fnaf scare bru stop',
+    description: 'Bonnies high key bad ngl',
     html: 'assets/games/FNAF.html',
     image: 'assets/images/fnaf.png',
   },
   {
     id: 'fnae',
     title: "Five Nights At Epstein's",
-    description: 'brooo epstein noooo stop diddle mee owwww',
+    description: 'ERDAH',
     html: 'assets/games/fnae.html',
     image: 'assets/images/fnae.png'
   },
   {
     id: 'fnaf2',
     title: "Five Nights At Freddy's 2",
-    description: 'fnaf scare bru stop',
+    description: 'It is FNAF but 2',
     html: 'assets/games/FNAF2.html',
     image: 'assets/images/fnaf2.png',
   },
   {
     id: 'fnaf3',
     title: "Five Nights At Freddy's 3",
-    description: 'fnaf scare bru stop',
+    description: 'Imma shoutout Cristian Wells on this bc Drew said he is good at FNAF 3',
     html: 'assets/games/FNAF3.html',
     image: 'assets/images/fnaf3.png',
   },
   {
     id: 'fnaf4',
     title: "Five Nights At Freddy's 4",
-    description: 'fnaf scare bru stop',
+    description: 'I dont feel like adding a desc ',
     html: 'assets/games/FNAF4.html',
     image: 'assets/images/fnaf4.png',
   },
@@ -168,21 +175,21 @@ var games = [
   {
     id: 'geometrydashworld',
     title: 'Geometry Dash World',
-    description: 'Geometry Dash World is a fast-paced rhythm platformer where you jump, fly, and dodge deadly obstacles in sync with energetic music. Simple controls, vibrant levels, and intense challenges make it easy to play—but hard to master.',
+    description: 'Holla at Daxton he is a CHUD!!',
     html: 'assets/games/gdworld.html',
     image: 'https://play-lh.googleusercontent.com/eu0Lv1QtDbCdVvuphJh84zxKNURIEcXjmZPhAv4NM4Xacfjum9TspfYkzRcBKv4zpDk'
   },
   {
     id: 'burritobison',
     title: 'Burrito Bison',
-    description: 'Stolen by an evil chef, Burrito Bison seeks out his cookbook to take back with him to make the finest salsa in the world. So strap on your rocket belt, and launch your way to glory! Features: *Three powerful wrestlers: Burrito Bison now gets to adventure with friends!',
+    description: 'This game is for those with ELITE BALL from 6th grade',
     url: 'https://www.silvergames.com/en/burrito-bison/gameframe',
     image: 'https://play-lh.googleusercontent.com/vpTgm9u7-GzZP_MceTWpDi0HbinXd_4phCoTwf4ZspFL-115FtNRdo_SU1p-khLDnLA'
   },
   {
     id: 'stealabrainrot',
     title: 'Steal a Brainrot',
-    description: 'Steal a Brainrot is a 2025 multiplayer video game developed by SpyderSammy (also known as Sammy). In the game, players buy and steal Brainrots, characters based on the Italian brainrot meme, which generate income over time.',
+    description: 'Im Sammy admin abuse',
     html: 'assets/games/sab.html',
     image: 'https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/img/steal-a-brainrot.jpg'
   },
@@ -196,7 +203,7 @@ var games = [
   {
     id: 'crazycattle3d',
     title: 'Crazy Cattle 3D',
-    description: 'Crazy Cattle 3D is a hilarious survival game where you control explosive sheep! Bump rivals, dodge hazards, and become the last sheep standing.',
+    description: 'Greatest fall off ever',
     url: 'https://crazycattle3donline.io/crazy-cattle-3d.embed',
     image: 'https://img.itch.zone/aW1nLzIwNzkwNDg0LnBuZw==/315x250%23c/O5flR4.png'
   },
@@ -210,7 +217,7 @@ var games = [
   {
     id: 'thereisnogame',
     title: 'There Is No Game',
-    description: 'A hilarious puzzle adventure that insists there is no game. Click, drag, and break the rules to uncover hidden secrets.',
+    description: 'Plot twist there is a game',
     url: 'https://pisaucer.github.io/boredhtml/games/thereisnogame/repo/alternate/871000/test.html',
     image: 'https://play-lh.googleusercontent.com/a6DfrYUL6viV0LAZFplqqA44gE0LHE0PyDnKHgdlydiUvccwzSBWrmRQSx5cjdL74Us=w240-h480-rw'
   },
@@ -245,7 +252,7 @@ var games = [
   {
     id: 'amongus',
     title: 'Among Us',
-    description: 'Work together to complete tasks — but beware, an impostor is trying to sabotage everyone.',
+    description: 'Sussy Baka',
     html: 'assets/games/amongus.html',
     image: 'https://play-lh.googleusercontent.com/8ddL1kuoNUB5vUvgDVjYY3_6HwQcrg1K2fd_R8soD-e2QYj8fT9cfhfh3G0hnSruLKec'
   },
@@ -357,7 +364,7 @@ var games = [
   {
     id: 'spacewaves',
     title: 'Space Waves',
-    description: 'Space Waves is a fast-paced rhythm platformer where you fly, and dodge deadly obstacles in sync with energetic music. Simple controls, unlimited levels, and intense challenges make it easy to play—but hard to master.',
+    description: 'Daxton is the kind of character who walks into a room like he owns it, despite having absolutely nothing—no charm, no wit, no redeeming qualities—to justify the audacity. He’s all ego crammed into a painfully small frame, compensating for his lack of stature with an even shorter temper and a towering sense of self-importance. Every word out of his mouth sounds like it was rehearsed in a mirror he definitely keeps at eye level, and somehow he still manages to be wrong about everything. He’s not intimidating, not impressive—just loud, insecure, and constantly trying to convince the world he’s bigger than he is in every possible way, failing spectacularly each time.',
     html: 'assets/games/spacewaves.html',
     image: 'https://crazygames.cdn.msnfun.com/9nm5764dbppg/v8/logo.png'
   },
@@ -413,14 +420,14 @@ var games = [
   {
     id: 'geometrydash',
     title: 'Geometry Dash',
-    description: 'Jump and fly through rhythm-based obstacle courses filled with spikes and hazards set to energetic music.',
+    description: 'Darius>Daxton any day',
     html: 'assets/games/gdlite.html',
     image: 'https://frogiesarcade.win/stuff/games/geodash.png'
   },
   {
     id: 'geometrydashsubzero',
     title: 'Geometry Dash SubZero',
-    description: 'A winter-themed version of Geometry Dash featuring intense new levels and music tracks.',
+    description: 'I bet Daxton Reads these... He is such a loser',
     html: 'assets/games/gdsubzero.html',
     image: 'https://img.utdstc.com/icon/b78/b46/b78b4624b14ac389631cb2b7ee2579f583101fb8559c8a0c36f742a393da0e31:200'
   },
@@ -519,6 +526,7 @@ if (customgames) customgames.forEach(game => {
 
 console.log("Loaded " + games.length + " games")
 if (customgames) console.log("Loaded " + customgames.length + " custom games")
+
 
 
 
