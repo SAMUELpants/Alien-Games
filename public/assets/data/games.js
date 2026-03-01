@@ -16,7 +16,7 @@ var games = [
     title: 'Deadshot',
     description: 'This one is for Cade Burleson Yw for Deadshot lol',
     html: 'https://deadshot.io/',
-    image: 'assets/images/thatsnotmyneighbor.png'
+    image: 'assets/images/'
   },
   {
     id: 'babysniperinvietnam',
@@ -519,5 +519,6 @@ if (customgames) customgames.forEach(game => {
 
 console.log("Loaded " + games.length + " games")
 if (customgames) console.log("Loaded " + customgames.length + " custom games")
+
 
 
