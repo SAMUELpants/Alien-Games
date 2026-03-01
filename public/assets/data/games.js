@@ -14,8 +14,15 @@ var games = [
   {
     id: 'Idle Breakout',
     title: 'Idle Breakout',
-    description: 'Bounce the balls blah blah blah',
+    description: 'The Game is down rn ',
     html: 'https://www.coolmathgames.com/0-idle-breakout',
+    image: ''
+  }, 
+  {
+    id: 'Iron Snout',
+    title: 'iron Snout',
+    description: 'Gabriel Derick Had me add this ',
+    html: 'https://poki.com/en/g/iron-snout?campaign=22719407655&adgroup=182660713618&extensionid=&targetid=kwd-325691565324&location=9026845&matchtype=e&network=g&device=c&devicemodel=&creative=760820868635&keyword=iron+snout&placement=&target=&gad_source=1&gad_campaignid=22719407655&gbraid=0AAAAADlg9ZGCPdEd6QAQkTJS1IM-R0-VK&gclid=Cj0KCQiAwYrNBhDcARIsAGo3u33yiqOfS_mXl6RDnYsZ_4GQ0MZeNJqxxQOhNDyD3E59iQlpUkVjFyIaAuEUEALw_wcB',
     image: ''
   }, 
   {
@@ -526,6 +533,7 @@ if (customgames) customgames.forEach(game => {
 
 console.log("Loaded " + games.length + " games")
 if (customgames) console.log("Loaded " + customgames.length + " custom games")
+
 
 
 
