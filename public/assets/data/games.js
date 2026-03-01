@@ -10,6 +10,13 @@ var games = [
     description: 'Thats Not My Neighbor puts you in the shoes of a doorman in 1955, tasked with a seemingly simple yet chilling objective: identify and prevent doppelgangers.',
     html: 'assets/games/thatsnotmyneighbor.html',
     image: 'assets/images/thatsnotmyneighbor.png'
+  }, 
+  {
+    id: 'Deadshot.io',
+    title: 'Deadshot',
+    description: 'This one is for Cade Burleson Yw for Deadshot lol',
+    html: 'https://deadshot.io/',
+    image: 'assets/images/thatsnotmyneighbor.png'
   },
   {
     id: 'babysniperinvietnam',
@@ -512,4 +519,5 @@ if (customgames) customgames.forEach(game => {
 
 console.log("Loaded " + games.length + " games")
 if (customgames) console.log("Loaded " + customgames.length + " custom games")
+
 
