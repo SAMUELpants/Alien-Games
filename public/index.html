@@ -16,9 +16,10 @@
 
 <body style="margin:0; min-height:100vh; background: linear-gradient(135deg, #0f0000, #3b0000, #990000); color:white;" theme="main">
 
-<!-- ================= LOGIN GATE ================= -->
-
+<!-- LOCK EVERYTHING INSIDE HERE -->
 <div id="siteContent" style="display:none;">
+
+  <!-- EVERYTHING BELOW IS YOUR ORIGINAL CODE -->
 
   <canvas id="constellationCanvas"></canvas>
 
@@ -44,26 +45,38 @@
     </div>
   </nav>
 
+  <!-- MAIN CONTENT -->
   <div class="center-container main-home">
     <h1 style="font-size:48px; text-shadow: 0 0 20px red;">Welcome to Sam's Alien Games</h1>
-    <p>Sam Danielson And Drew Flannigan are Aliens</p>
+    <p class="dark-subtitle">Sam Danielson And Drew Flannigan are Aliens</p>
+
+    <button onclick="window.location.href='https://forms.gle/ZBBpuZRX88qZVUAB7'" class="button play">
+      Please report ANY issue here!
+    </button>
+
+    <button onclick="launchab()" id="launchab" class="button play">
+      Launch in about:blank
+    </button>
+
+    <div class="bottom-links">
+      <a href="./settings.html" class="button secondary">Settings</a>
+      <a href="./about.html" class="button secondary">About</a>
+    </div>
   </div>
 
-  <!-- Scripts -->
   <script src="./js/index.js"></script>
   <script src="./js/constellations.js"></script>
 
 </div>
+<!-- END siteContent -->
 
-<!-- ================= LOGIN BUTTONS ================= -->
-
+<!-- LOGIN BUTTONS -->
 <div style="position:fixed; top:20px; right:20px; z-index:10000;">
   <button id="loginBtn">Login with Google</button>
   <button id="logoutBtn" style="display:none;">Logout</button>
 </div>
 
-<!-- ================= FIREBASE AUTH ================= -->
-
+<!-- FIREBASE AUTH -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged }
@@ -86,13 +99,8 @@ const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
 const site = document.getElementById("siteContent");
 
-loginBtn.onclick = () => {
-  signInWithPopup(auth, provider);
-};
-
-logoutBtn.onclick = () => {
-  signOut(auth);
-};
+loginBtn.onclick = () => signInWithPopup(auth, provider);
+logoutBtn.onclick = () => signOut(auth);
 
 onAuthStateChanged(auth, user => {
   if (user) {
