@@ -1,308 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
-    <title>Alien Games</title>
+  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png" />
+  <title>Alien Games</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/themes.css" />
-    <link rel="stylesheet" href="./css/master.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
+  <link rel="stylesheet" href="./css/themes.css" />
+  <link rel="stylesheet" href="./css/master.css" />
+  <link rel="stylesheet" href="./css/nav.css" />
 
-    <meta name="theme-color" content="#3b0a3f" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  </head>
+  <meta name="theme-color" content="#3b0a3f" />
+</head>
 
-  <body style="margin:0; min-height:100vh; background: linear-gradient(135deg, #0f0000, #3b0000, #990000); color: white;" theme="main">
-    <canvas id="constellationCanvas"></canvas>
+<body style="margin:0; min-height:100vh; background: linear-gradient(135deg, #0f0000, #3b0000, #990000); color:white;" theme="main">
 
-    <!-- Sidebar Toggle -->
-    <input type="checkbox" id="navToggle" class="nav-toggle" />
+<!-- ================= LOGIN GATE ================= -->
 
-    <!-- =========================
-         SIDEBAR
-         ========================= -->
-    <nav class="sidebar">
-      <label for="navToggle" class="sidebar-edge" aria-label="Toggle sidebar"></label>
+<div id="siteContent" style="display:none;">
 
-      <div class="logo">
-        <a href="/">
-          <img
-            src="./assets/images/icon.png"
-            alt="Alien Games Logo"
-            draggable="false"
-            class="logo-img"
-          />
-        </a>
-      </div>
+  <canvas id="constellationCanvas"></canvas>
 
-      <p id="time"></p>
+  <input type="checkbox" id="navToggle" class="nav-toggle" />
 
-      <div class="navitems">
-        <div class="navitem">
-          <a selected href="/">
-            <img src="./assets/images/home.png" alt="Home" draggable="false" />
-            <span class="nav-label">Home</span>
-          </a>
-        </div>
+  <nav class="sidebar">
+    <label for="navToggle" class="sidebar-edge"></label>
 
-        <div class="navitem">
-          <a href="/maths.html">
-            <img src="./assets/images/games.png" alt="Games" draggable="false" />
-            <span class="nav-label">Games</span>
-          </a>
-        </div>
-
-        <div class="navitem">
-          <a href="/apps.html">
-            <img src="./assets/images/apps.png" alt="Apps" draggable="false" />
-            <span class="nav-label">Apps</span>
-          </a>
-        </div>
-
-        <div class="navitem">
-          <a href="/emulator.html">
-            <img src="./assets/images/emulator.png" alt="Emulator" draggable="false" />
-            <span class="nav-label">Emulator</span>
-          </a>
-        </div>
-
-        <div class="navitem">
-          <a href="/search.html">
-            <img src="./assets/images/search.png" alt="Search" draggable="false" />
-            <span class="nav-label">Search</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- =========================
-         MAIN THEME HOMEPAGE
-         ========================= -->
-    <div class="center-container main-home">
-      <h1 style="font-size:48px; text-shadow: 0 0 20px red;">Welcome to Sam's Alien Games </h1> 
-      <p class="dark-subtitle">Sam Danielson And Drew Flannigan are Aliens</p>
-
-      <button
-        onclick="window.location.href='https://forms.gle/ZBBpuZRX88qZVUAB7'"
-        class="button play"
-      >
-        Please report ANY issue here!
-      </button>
-
-      <button onclick="launchab()" id="launchab" class="button play">
-        Launch in about:blank
-      </button>
-
-      <div class="bottom-links">
-        <a href="./settings.html" class="button secondary">Settings</a>
-        <a href="./about.html" class="button secondary">About</a>
-      </div>
+    <div class="logo">
+      <a href="/">
+        <img src="./assets/images/icon.png" draggable="false" class="logo-img" />
+      </a>
     </div>
 
-    <!-- =========================
-         DARK THEME HOMEPAGE
-         ========================= -->
-    <div class="dark-home">
-      <h1 style="font-size:48px; text-shadow: 0 0 20px red;" class="dark-title">Welcome to Alien Games</h1>
-      <p class="dark-subtitle">Sam Danielson And Drew Flannigan are Aliens</p>
+    <p id="time"></p>
 
-      <div class="dark-search-wrap">
-        <input
-          type="text"
-          id="darkSearch"
-          class="dark-search"
-          placeholder="search anything..."
-          autocomplete="off"
-        />
-      </div>
-
-      <div class="bottom-links" style="margin-top: 20px">
-        <a href="./settings.html" class="button secondary">Settings</a>
-        <a href="./about.html" class="button secondary">About</a>
-<a href="https://forms.gle/ZBBpuZRX88qZVUAB7" target="_blank" rel="noopener" class="button secondary">
-  Report
-</a>
-      </div>
+    <div class="navitems">
+      <div class="navitem"><a selected href="/">Home</a></div>
+      <div class="navitem"><a href="/maths.html">Games</a></div>
+      <div class="navitem"><a href="/apps.html">Apps</a></div>
+      <div class="navitem"><a href="/emulator.html">Emulator</a></div>
+      <div class="navitem"><a href="/search.html">Search</a></div>
     </div>
+  </nav>
 
-    <!-- =========================
-         SCRIPTS
-         ========================= -->
-    <script src="./js/index.js"></script>
-    <script src="./js/constellations.js"></script>
+  <div class="center-container main-home">
+    <h1 style="font-size:48px; text-shadow: 0 0 20px red;">Welcome to Sam's Alien Games</h1>
+    <p>Sam Danielson And Drew Flannigan are Aliens</p>
+  </div>
 
-    <script>
-      // Dark homepage search redirect
-      (function () {
-        const darkSearch = document.getElementById("darkSearch");
-        if (!darkSearch) return;
+  <!-- Scripts -->
+  <script src="./js/index.js"></script>
+  <script src="./js/constellations.js"></script>
 
-        darkSearch.addEventListener("keydown", function (e) {
-          if (e.key === "Enter") {
-            const q = darkSearch.value.trim();
-            if (!q) return;
-            window.location.href = "/search.html?q=" + encodeURIComponent(q);
-          }
-        });
-      })();
-    </script>
+</div>
 
-    <!-- =========================
-         RECENT UPDATES POPUP
-         ========================= -->
-    <style>
-      .update-modal-backdrop {
-        position: fixed;
-        inset: 0;
-        background: rgba(1, 0, 2, 0.55);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-      }
+<!-- ================= LOGIN BUTTONS ================= -->
 
-      .update-modal {
-        background: #111827;
-        color: #f9fafb;
-        max-width: 420px;
-        width: 90%;
-        padding: 1.5rem 1.75rem;
-        border-radius: 14px;
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        animation: fadeIn 0.2s ease-out;
-      }
+<div style="position:fixed; top:20px; right:20px; z-index:10000;">
+  <button id="loginBtn">Login with Google</button>
+  <button id="logoutBtn" style="display:none;">Logout</button>
+</div>
 
-      .update-modal h2 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .update-modal p {
-        margin-bottom: 0.75rem;
-        font-size: 0.95rem;
-        opacity: 0.9;
-      }
-
-      .update-list {
-        margin-bottom: 1rem;
-        padding-left: 1.1rem;
-        font-size: 0.9rem;
-      }
-
-      .update-list li {
-        margin-bottom: 0.3rem;
-      }
-
-      .update-modal-footer {
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      .update-modal button {
-        cursor: pointer;
-        border: none;
-        border-radius: 999px;
-        padding: 0.45rem 1rem;
-        font-size: 0.9rem;
-        background: #6d28d9;
-        color: white;
-        transition: 0.2s ease;
-      }
-
-      .update-modal button:hover {
-        opacity: 0.9;
-      }
-
-      @keyframes fadeIn {
-        from {
-          transform: scale(0.95);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
-      @keyframes fadeOut {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-
-      .update-modal-backdrop.fade-out {
-        animation: fadeOut 0.25s ease forwards;
-      }
-    </style>
-
-    <div id="updateModalBackdrop" class="update-modal-backdrop">
-      <div class="update-modal">
-        <h2>Recent Updates</h2>
-        <p>Here’s what’s new that Sam changed:</p>
-
-        <ul class="update-list">
-          <li>This Website Is Owned By Samuel Danielson(Shoutout Drew & Travis)</li>
-          <li>Use Tiktok, Instagram, Snapchat and hide all from Linewize!!</li>
-          <li>I have to pay to keep this up so 5 dollars for access sorry:(</li>
-          <li>Dont worry guys, we now have DEADSHOT.IO on here!! thank Cade Burleson for that lol!</li>
-        </ul>
-
-        <div class="update-modal-footer">
-          <button id="updateModalClose">Got it</button>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const backdrop = document.getElementById("updateModalBackdrop");
-        const closeBtn = document.getElementById("updateModalClose");
-
-        // show on load
-        backdrop.style.display = "flex";
-
-        function closeModal() {
-          backdrop.classList.add("fade-out");
-
-          setTimeout(() => {
-            backdrop.style.display = "none";
-            backdrop.classList.remove("fade-out");
-          }, 250);
-        }
-
-        closeBtn.addEventListener("click", closeModal);
-
-        backdrop.addEventListener("click", function (e) {
-          if (e.target === backdrop) {
-            closeModal();
-          }
-        });
-      });
-    </script>
-    <!-- =========================
-         END RECENT UPDATES POPUP
-         ========================= -->
-  </body style="margin:0; min-height:100vh; background: linear-gradient(135deg, #0f0000, #3b0000, #990000); color: black;">
-</html>
-
-<a href="balatro/index.html">
-  <button style="padding:15px 30px; font-size:18px;">
-    Play Balatro 
-  </button>
-</a>
-
-
-<button id="loginBtn">Login</button>
-<button id="logoutBtn" style="display:none;">Logout</button>
+<!-- ================= FIREBASE AUTH ================= -->
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
@@ -315,8 +75,7 @@ const firebaseConfig = {
   projectId: "alien-games-2969a",
   storageBucket: "alien-games-2969a.firebasestorage.app",
   messagingSenderId: "252082915218",
-  appId: "1:252082915218:web:f51254830d4063237c634b",
-  measurementId: "G-TGYSMRVJRN"
+  appId: "1:252082915218:web:f51254830d4063237c634b"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -325,6 +84,7 @@ const provider = new GoogleAuthProvider();
 
 const loginBtn = document.getElementById("loginBtn");
 const logoutBtn = document.getElementById("logoutBtn");
+const site = document.getElementById("siteContent");
 
 loginBtn.onclick = () => {
   signInWithPopup(auth, provider);
@@ -336,15 +96,16 @@ logoutBtn.onclick = () => {
 
 onAuthStateChanged(auth, user => {
   if (user) {
+    site.style.display = "block";
     loginBtn.style.display = "none";
-    logoutBtn.style.display = "block";
+    logoutBtn.style.display = "inline-block";
   } else {
-    loginBtn.style.display = "block";
+    site.style.display = "none";
+    loginBtn.style.display = "inline-block";
     logoutBtn.style.display = "none";
   }
 });
 </script>
 
-
-
-
+</body>
+</html>
