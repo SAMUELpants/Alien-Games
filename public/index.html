@@ -19,8 +19,6 @@
 <!-- LOCK EVERYTHING INSIDE HERE -->
 <div id="siteContent" style="display:none;">
 
-  <!-- EVERYTHING BELOW IS YOUR ORIGINAL CODE -->
-
   <canvas id="constellationCanvas"></canvas>
 
   <input type="checkbox" id="navToggle" class="nav-toggle" />
@@ -62,6 +60,16 @@
       <a href="./settings.html" class="button secondary">Settings</a>
       <a href="./about.html" class="button secondary">About</a>
     </div>
+
+    <!-- MOVED BALATRO BUTTON INSIDE LOCK -->
+    <div style="margin-top:20px;">
+      <a href="balatro/index.html">
+        <button style="padding:15px 30px; font-size:18px;">
+          Play Balatro Clone
+        </button>
+      </a>
+    </div>
+
   </div>
 
   <script src="./js/index.js"></script>
@@ -114,14 +122,6 @@ onAuthStateChanged(auth, user => {
   }
 });
 </script>
-  <a href="balatro/index.html">
-  <button style="padding:15px 30px; font-size:18px;">
-    Play Balatro Clone
-  </button>
-</a>
-
 
 </body>
 </html>
-
-
