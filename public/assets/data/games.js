@@ -29,7 +29,7 @@ var games = [
     id: 'Deadshot.io',
     title: 'Deadshot',
     description: 'This one is for Cade Burleson Yw for Deadshot lol',
-    html: 'https://deadshot.io/',
+    html: 'https://geometry-games.io/deadshot-io',
     image: 'assets/images/'
   },
   {
@@ -533,6 +533,7 @@ if (customgames) customgames.forEach(game => {
 
 console.log("Loaded " + games.length + " games")
 if (customgames) console.log("Loaded " + customgames.length + " custom games")
+
 
 
 
